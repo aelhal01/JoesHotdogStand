@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Order Joe's Hotdog Stand</title>
+
+    <script type="text/javascript">
+      var hotdog_num, frenchfries_num, drinks_num;
+      alert("Welcome to Joe's Hotdog Stand! Ready for your order?");
+      hotdog_num = prompt("How many Joe's hotdogs do you want?");
+      frenchfries_num = prompt("How many Joe's french fries do you want?");
+      drinks_num = prompt("How many Joe's drinks do you want?");
+
+      var total_notax, discount, tax, total, nodiscount;
+      total_notax = Number(hotdog_num)* 3.75 + Number(frenchfries_num)*2.00 + Number(drinks_num)*1.50;
+
+      discount = 0;
+      if(total_notax >= 20) {
+        discount = Number(total_notax) * (0.1);
+      }
+
+      total = Number(total_notax) - Number(discount);
+
+      tax = Number(total) * 0.0625;
+
+      total = Number(total) + Number(tax);
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Joe's Hotdog Stand</h1>
+    </header>
+
+    <section>
+    <h2> YOUR ORDER</h2>
+
+    <div>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+
+      <strong>ITEM</strong>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <strong>PRICE</strong>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <strong>QUANTITY</strong>
+    </div>
+
+    <div>
+      <img src="hotdog.png" width="100">
+      &nbsp;
+      &nbsp;
+      <span>Hotdog</span>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <span>$3.75</span>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <span>
+        <script type="text/javascript">
+          document.write(hotdog_num);
+        </script>
+      </span>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div>
+      <img src="fries.png" width="100">
+      <span>French Fries</span>
+      &nbsp;
+      &nbsp;
+      <span>$2.00</span>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <span>
+        <script type="text/javascript">
+          document.write(frenchfries_num);
+        </script>
+      </span>
+    </div>
+
+    <div>
+      <img src="drinks.png" width="100">
+      &nbsp;
+      &nbsp;
+      <span>Drinks</span>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <span>$1.50</span>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <span>
+        <script type="text/javascript">
+          document.write(drinks_num);
+        </script>
+      </span>
+    </div>
+
+    <br>
+    <hr>
+
+    <div>
+      <span>Total without MA taxes:</span>
+      &nbsp;
+      <span>$</span>
+      <span>
+        <script type="text/javascript">
+          document.write(total_notax);
+        </script>
+      </span>
+    </div>
+
+    <hr>
+
+    <div>
+      <script type="text/javascript">
+        if(total_notax >= 20) {
+          document.write("Since your order is above $20, you get a 10% discount! -$");
+          discount = discount.toFixed(2);
+          document.write(discount);
+        }
+        </script>
+    </div>
+
+    <br>
+
+    <div>
+      <span>Taxes</span>
+      &nbsp;
+      <span>$</span>
+      <span>
+        <script type="text/javascript">
+          tax = tax.toFixed(2);
+          document.write(tax);
+        </script>
+      </span>
+    </div>
+
+    <hr>
+
+    <div>
+      <strong>TOTAL:</strong>
+      &nbsp;
+      <span><strong>$</strong></span>
+      <span><strong>
+        <script type="text/javascript">
+          total = total.toFixed(2);
+          document.write(total);
+        </script>
+      </strong></span>
+    </div>
+
+    <br>
+    <br>
+
+    <div>
+      <button class="purchase_button" type="button">PURCHASE</button>
+    </section>
+
+    <hr>
+
+    <footer>
+      <h3> Joe's Hotdog Stand </h3>
+      <ul>
+        <li>
+          <a href="https://facebook.com" target="_blank">
+            <image src="facebook_logo.png" width="30">
+          </a>
+        </li>
+
+        <li>
+          <a href="https://instagram.com" target="_blank">
+            <image src="instagram_logo.png" width="30">
+          </a>
+        </li>
+    </footer>
+  </body>
